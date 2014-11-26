@@ -1,0 +1,39 @@
+@import 'common'
+@import 'compass/typography/text/replacement'
+
+.header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  text-align: center
+  height: $header-height
+  +translate3d(0, 0, 0)
+  z-index: 9
+.header-artsy-logo,
+.header-folio-logo
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center center
+  +hide-text
+.header-artsy-logo
+  position: absolute
+  top: 0
+  left: $unit
+  width: 100px
+  height: $header-height
+  background-image: url(image-path('artsy.svg'))
+.header-folio-logo
+  display: inline-block
+  width: 100px
+  height: $header-height
+  background-image: url(image-path('folio.svg'))
+.header-text
+  position: absolute
+  top: 0
+  right: ($unit * 2)
+  bottom: 0
+  +avant-garde
+  font-size: 13px
+  line-height: $header-height
+  vertical-align: middle

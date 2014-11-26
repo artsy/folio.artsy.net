@@ -1,0 +1,44 @@
+@import 'common'
+
+@media screen and (max-width: 600px)
+  // Base
+  html,
+  body
+    height: inherit
+
+  // Header
+  .header
+    position: absolute
+  .header-artsy-logo
+    left: ($unit * 2)
+  .header-folio-logo
+    position: absolute
+    top: 0
+    right: ($unit * 2)
+    bottom: 0
+    width: 100px
+  .header-text
+    display: none
+
+  // Sections
+  .section
+    position: relative
+    padding: 0 $unit
+  .section-meta,
+  .section-image
+    float: none
+    width: 100%
+    padding: 0
+  .section-1
+    height: inherit
+    padding: 0
+    .section-meta,
+    .section-image
+      float: none
+      width: 100%
+    .section-meta
+      position: relative
+      padding: ($unit * 2)
+      height: 400px
+  .cta
+    width: 100%

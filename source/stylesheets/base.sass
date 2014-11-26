@@ -1,0 +1,57 @@
+@import 'compass/reset'
+@import 'common'
+
+*,
+*:before,
+*:after
+  +box-sizing(border-box)
+
+html,
+body
+  height: 100%
+
+body
+  background-color: white
+  color: black
+  +garamond
+  +font-smoothing(antialiased)
+
+a
+  color: black
+  text-decoration: none
+  border-bottom: 1px solid $border-color
+
+.button
+  display: inline-block
+  +avant-garde
+  text-decoration: none
+  color: white
+  background-color: black
+  padding: 15px 30px
+  font-size: 13px
+  line-height: 1
+  cursor: pointer
+  border: none
+  +transition(background-color 0.25s, color 0.25s)
+  &:focus,
+  &:hover
+    outline: none
+    background-color: transparent
+    color: white
+    background-color: $purple-color
+
+.bordered-input
+  +appearance(none)
+  margin: 0
+  padding: 10px
+  border: 2px solid $border-color
+  +border-radius(0)
+  +box-shadow(none)
+  font-size: 16px
+  background-color: transparent
+  +transition(gray 0.25s)
+  +garamond
+  &:focus, &:active
+    border-color: $purple-color
+    outline: none
+    +transition(border-color 0.5s)

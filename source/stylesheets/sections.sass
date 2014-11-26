@@ -1,0 +1,98 @@
+@import 'common'
+
++keyframes(fade)
+  0%
+    +opacity(0.25)
+  50%
+    +opacity(1)
+  100%
+    +opacity(0.25)
+
+.caret
+  display: block
+  position: absolute
+  width: $unit
+  height: $unit
+  bottom: $unit * 2
+  left: 50%
+  margin-left: -($unit / 2)
+  border-style: solid
+  border-width: 0 0 2px 2px
+  border-color: black
+  +rotate(-45deg)
+  +animation(fade 2s infinite)
+
+.section
+  margin: ($unit * 4) 0
+  padding: 0 ($unit * 4)
+.section-inner
+  margin: 0 auto
+  max-width: 1024px
+  +clearfix
+
+.section-meta
+  width: 40%
+  float: left
+.section-image
+  width: 60%
+  float: right
+  > img
+    max-width: 100%
+
+.section-headline
+  margin: $unit 0
+  font-size: 40px
+  padding-right: ($unit * 3)
+.section-description
+  margin: $unit 0
+  font-size: 18px
+  line-height: 1.25
+  padding-right: ($unit * 2)
+.section-cta
+  margin: ($unit * 1.5) 0
+
+
+// Specific to individual sections
+.section-1
+  height: 100%
+  margin: 0
+  padding-top: $header-height
+  background-color: #ececec
+  .section-meta,
+  .section-image
+    float: none
+    position: absolute
+  .section-meta
+    width: 35%
+    margin-top: ($unit * 2)
+    z-index: 1
+  .section-image
+    bottom: 0
+    right: 0
+    left: 0
+    width: 100%
+    z-index: 0
+
+.section-4
+  margin-bottom: $unit
+
+// Bottom form
+.cta
+  width: 600px
+  padding: $unit 0
+  margin: $unit auto
+  text-align: center
+  border-bottom: 2px solid $border-color
+  .section-headline
+    padding: 0
+  .section-description
+    margin: ($unit * 1.5) 0
+    font-size: 16px
+    padding: 0
+  input, .button
+    display: block
+    width: 100%
+    margin: ($unit / 2) 0
+.cta-inner
+  width: 300px
+  margin: $unit auto
