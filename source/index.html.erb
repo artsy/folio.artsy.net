@@ -33,20 +33,22 @@
 
 <section id='cta' class='cta'>
   <div class='cta-inner'>
-    <h2 class='section-headline'>Get Folio</h2>
+    <h2 class='section-headline'><%= data.config.cta_headline %></h2>
     <div class='section-description'>
-      An Artsy representative will reach out to you
-      about partnering with Artsy to get Folio.
+      <%= data.config.cta_description %>
     </div>
-    <form>
-      <input type='text' class='bordered-input' placeholder='Name'>
-      <input type='email' class='bordered-input' placeholder='Email'>
-      <a href='#' class='button is-block'>Send</a>
+
+    <form id='cta-form'>
+      <input name='name' type='text' class='bordered-input' placeholder='Name'>
+      <input name='email' type='email' class='bordered-input' placeholder='Email'>
+      <button class='button is-block'>Send</button>
     </form>
   </div>
 </section>
 
 <footer class='footer'>
-  Already a partner of Artsy?
-  <a href='https://itunes.apple.com/us/app/artsy-folio/id504862164'>Download Folio</a>
+  <%= data.config.footer_text %>
+  <a href='<%= data.config.footer_link_url %>'>
+    <%= data.config.footer_link_text %>
+  </a>
 </footer>
