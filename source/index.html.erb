@@ -6,9 +6,9 @@
 
 <% data.sections.each_with_index do |section, i| %>
   <% if i == 0 %>
-    <%= partial 'hero_section', locals: { i: i, section: section } %>
+    <%= partial '_hero_section', locals: { i: i, section: section } %>
   <% else %>
-    <%= partial 'section', locals: { i: i, section: section } %>
+    <%= partial '_section', locals: { i: i, section: section } %>
   <% end %>
 <% end %>
 
