@@ -23,6 +23,7 @@
   +animation(fade 2s infinite)
 
 .section
+  position: relative
   margin: ($unit * 4) 0
   padding: 0 ($unit * 4)
 .section-inner
@@ -51,27 +52,15 @@
 .section-cta
   margin: ($unit * 1.5) 0
 
-
 // Specific to individual sections
 .section-1
-  height: 100%
   margin: 0
-  padding-top: $header-height
+  padding-top: ($header-height * 3)
+  padding-bottom: ($header-height * 3)
   background-color: #ececec
-  .section-meta,
-  .section-image
-    float: none
-    position: absolute
-  .section-meta
-    width: 35%
-    margin-top: ($unit * 2)
-    z-index: 1
-  .section-image
-    bottom: 0
-    right: 0
-    left: 0
-    width: 100%
-    z-index: 0
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: bottom right
 
 .section-4
   margin-bottom: $unit

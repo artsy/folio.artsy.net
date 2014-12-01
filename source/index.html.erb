@@ -5,30 +5,11 @@
 </header>
 
 <% data.sections.each_with_index do |section, i| %>
-  <section class='section section-<%= i + 1 %>'>
-    <div class='section-inner'>
-
-      <div class='section-meta'>
-        <h2 class='section-headline'><%= section.headline %></h2>
-        <div class='section-description'>
-          <%= render_markdown(section.description) %>
-        </div>
-        <div class='section-cta'>
-          <a href='#' class='button section-cta-button'>Get Folio</a>
-        </div>
-      </div>
-
-      <div class='section-image'>
-        <%= image_tag section.image %>
-      </div>
-
-    </div>
-
-    <% if i == 0 %>
-      <a href='#' class='caret push-down'></a>
-    <% end %>
-
-  </section>
+  <% if i == 0 %>
+    <%= partial 'hero_section', locals: { i: i, section: section } %>
+  <% else %>
+    <%= partial 'section', locals: { i: i, section: section } %>
+  <% end %>
 <% end %>
 
 <section id='cta' class='cta'>
