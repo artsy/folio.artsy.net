@@ -1,0 +1,36 @@
+@import 'common'
+
++keyframes(fade-out)
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  display: none
+  pointer-events: none
+  z-index: 1
+  +animation(fade-out 1s normal forwards)
+  +animation-delay(5s)
+
+.modal-message
+  position: absolute
+  top: 10%
+  right: 10%
+  bottom: 10%
+  left: 10%
+  background-color: white
+  text-align: center
+  font-size: 30px
+  border: 2px solid $hero-bg-color
+  > span
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    +translate(-50%, -50%)
