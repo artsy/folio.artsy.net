@@ -11,7 +11,7 @@
       <div class='section-meta'>
         <h2 class='section-headline'><%= section.headline %></h2>
         <div class='section-description'>
-          <%= section.description %>
+          <%= render_markdown(section.description) %>
         </div>
         <div class='section-cta'>
           <a href='#' class='button section-cta-button'>Get Folio</a>

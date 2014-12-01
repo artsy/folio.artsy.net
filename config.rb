@@ -31,3 +31,9 @@ activate :sync do |sync|
   sync.after_build = true
   sync.public_path = 'build'
 end
+
+helpers do
+  def render_markdown(string)
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML.new).render(string)
+  end
+end
