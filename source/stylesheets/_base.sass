@@ -24,6 +24,11 @@ a
   color: black
   text-decoration: none
   border-bottom: 1px solid $border-color
+  +transition(color, 0.25s)
+  &:hover,
+  &:active
+    color: $purple-color
+    border-color: rgba($purple-color, 0.25)
 
 .button
   display: inline-block
