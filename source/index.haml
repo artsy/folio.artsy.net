@@ -1,0 +1,27 @@
+.header
+  .header-artsy-logo Artsy
+  .header-folio-logo Folio
+  .header-text
+    %a{ href: 'https://artsy.net/gallery-partnerships', target: '_blank' }
+      Artsy for Galleries
+
+- data.sections.each_with_index do |section, i|
+  - if i == 0
+    = partial '_hero_section', locals: { i: i, section: section }
+  - else
+    = partial '_section', locals: { i: i, section: section }
+
+#cta.cta
+  .cta-inner
+    %h2.section-headline= data.config.cta_headline
+    .section-description= data.config.cta_description
+    %form#cta-form{ :'accept-charset' => 'UTF-8', action: 'https://formkeep.com/f/c139a8db9c9d', method: 'POST' }
+      %input{ type: 'hidden', name: 'utf8', value: '✓' }
+      %input.bordered-input{ name: 'name', type: 'text', placeholder: 'Name', required: true }
+      %input.bordered-input{ name: 'email', type: 'email', placeholder: 'Email', required: true }
+      %button.button.is-block Send
+
+%footer.footer
+  = data.config.footer_text
+  %a{ href: data.config.footer_link_url }
+    = data.config.footer_link_text

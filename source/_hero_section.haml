@@ -1,0 +1,12 @@
+%section.section{ class: "section-#{i + 1}", style: "background-image: url(#{image_path section.image});" }
+  .section-inner
+    .section-meta
+      %h2.section-headline
+        = section.headline
+      .section-description
+        = render_markdown section.description
+      .section-cta
+        %a.button.section-cta-button{ href: '#' }
+          Get Folio
+
+  %a.caret.push-down{ href: '#' }
