@@ -55,7 +55,7 @@ class App
     $('.js-learn-more-hero').click (e) =>
       e.preventDefault()
       mixpanel.track 'Clicked "Learn More" in hero'
-      @scrollTo $('#cta')
+      @scrollTo $('.section-2')
 
     mixpanel.track_links '.js-artsy-for-galleries', 'Clicked "Artsy For Galleries"'
     mixpanel.track_links '.js-download-folio', 'Clicked "Download Folio"'
