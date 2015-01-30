@@ -8,8 +8,14 @@
   left: 0
   text-align: center
   height: $header-height
-  +translate3d(0, 0, 0)
   z-index: 9
+  border-bottom: 1px solid $border-color
+  background-color: rgba($hero-bg-color, 0.25)
+  +translate3d(0, 0, 0)
+  +transition(background-color, 0.25s)
+  &.is-active
+    background-color: white
+    background-color: rgba(white, 0.99)
 .header-artsy-logo,
 .header-folio-logo
   background-size: contain
@@ -31,9 +37,15 @@
 .header-text
   position: absolute
   top: 0
-  right: ($unit * 2)
+  right: 0
   bottom: 0
   +avant-garde
   font-size: 13px
   line-height: $header-height
   vertical-align: middle
+  > a
+    display: inline-block
+    border-left: 1px solid $border-color
+    border-bottom: none
+    padding: 0 ($unit * 2)
+    line-height: ($header-height / 1.5)

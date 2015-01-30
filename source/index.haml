@@ -1,8 +1,8 @@
 .header
   .header-artsy-logo Artsy
-  .header-folio-logo Folio
+  .header-folio-logo.js-scroll-to-top Folio
   .header-text
-    %a{ href: 'https://artsy.net/gallery-partnerships', target: '_blank' }
+    %a.js-artsy-for-galleries{ href: 'https://artsy.net/gallery-partnerships', target: '_blank' }
       Artsy for Galleries
 
 - data.sections.each_with_index do |section, i|
@@ -11,17 +11,33 @@
   - else
     = partial '_section', locals: { i: i, section: section }
 
+#endorsements.endorsements
+  %h2.endorsement-headline
+    = data.endorsements.headline
+  .endorsement-logos
+    - data.endorsements.logos.each do |logo|
+      = image_tag logo.src, alt: logo.alt, class: 'endorsement-logo'
+  .endorsement-quotes
+    - data.endorsements.quotes.each do |quote|
+      .endorsement-quote
+        %p
+          = "“#{quote.quote}”"
+        %p
+          = "—#{quote.credit.name}, "
+          %em= quote.credit.place
+
 #cta.cta
   .cta-inner
-    %h2.section-headline= data.config.cta_headline
-    .section-description= data.config.cta_description
-    %form#cta-form{ :'accept-charset' => 'UTF-8', action: 'https://formkeep.com/f/c139a8db9c9d', method: 'POST' }
-      %input{ type: 'hidden', name: 'utf8', value: '✓' }
-      %input.bordered-input{ name: 'name', type: 'text', placeholder: 'Name', required: true }
-      %input.bordered-input{ name: 'email', type: 'email', placeholder: 'Email', required: true }
-      %button.button.is-block Send
+    %h2.section-headline
+      = data.cta.headline
+    %h3.section-subheadline
+      = data.cta.description
+    %a.button.button--inverted.js-learn-more-footer{ href: data.cta.button.href }
+      = data.cta.button.label
 
-%footer.footer
-  = data.config.footer_text
-  %a{ href: data.config.footer_link_url }
-    = data.config.footer_link_text
+    %hr
+
+    %h3.section-subheadline
+      = data.cta.subheadline
+    %a.button.button--inverted.js-download-folio{ href: data.config.app_url }
+      = data.config.app_download_text

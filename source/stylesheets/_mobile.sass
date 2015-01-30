@@ -9,12 +9,13 @@
   // Header
   .header
     position: absolute
+    border: none
   .header-artsy-logo
-    left: ($unit * 2)
+    left: $unit
   .header-folio-logo
     position: absolute
     top: 0
-    right: ($unit * 2)
+    right: $unit
     bottom: 0
     width: 100px
   .header-text
@@ -24,13 +25,19 @@
   .section
     position: relative
     padding: 0 $unit
+    margin: ($unit * 2) 0
   .section-meta,
   .section-image
     float: none
     width: 100%
     padding: 0
+  .section-headline
+    padding-right: ($unit * 2)
+  .section-cta-button
+    display: none
   .section-1
     height: inherit
+    margin: 0
     padding: 0 $unit
     background-size: 70%
     .section-meta
@@ -38,5 +45,30 @@
       width: 100%
       position: relative
       padding: $header-height 0
-  .cta
+  .section-1
+    background-size: 90%
+    .section-meta
+      padding-bottom: ($header-height * 3.5)
+  .section-3
+    .section-meta
+      padding: 0
+
+  .caret
+    position: relative
+    margin: auto
+
+  .endorsement-headline
     width: 100%
+    padding: 0 $unit $unit $unit
+  .endorsement-logo
+    max-width: 35%
+  .endorsement-quote
+    display: block
+    width: 100%
+    margin: ($unit * 2) 0
+    padding: 0 ($unit * 2)
+    font-size: 20px
+
+  .cta-inner
+    width: 100%
+    padding: 0 $unit

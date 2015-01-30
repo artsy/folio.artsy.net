@@ -6,7 +6,10 @@
       .section-description
         = render_markdown section.description
       .section-cta
-        %a.button.section-cta-button{ href: '#' }
-          Get Folio
+        %a.button.section-cta-button.js-learn-more-hero{ href: '#' }
+          Learn More
+        %p
+          Already a partner?
+          = link_to data.config.app_download_text, data.config.app_url
 
-  %a.caret.push-down{ href: '#' }
+  %a.caret.js-scroll-to-fold{ href: '#' }
