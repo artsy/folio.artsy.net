@@ -1,0 +1,15 @@
+%section.section{ class: "section-#{i + 1}", style: "background-image: url(#{image_path section.image});" }
+  .section-inner
+    .section-meta
+      %h2.section-headline
+        = section.headline
+      .section-description
+        = render_markdown section.description
+      .section-cta
+        %a.button.section-cta-button.js-learn-more-hero{ href: '#' }
+          Learn More
+        %p
+          Already a partner?
+          = link_to data.config.app_download_text, data.config.app_url
+
+  %a.caret.js-scroll-to-fold{ href: '#' }

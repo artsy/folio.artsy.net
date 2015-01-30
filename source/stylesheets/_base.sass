@@ -6,6 +6,13 @@
 *:after
   +box-sizing(border-box)
 
+::selection
+  background-color: $purple-color
+  color: white
+::-moz-selection
+  background-color: $purple-color
+  color: white
+
 html,
 body
   height: 100%
@@ -13,6 +20,7 @@ body
 body
   background-color: white
   color: black
+  line-height: 1.35
   +garamond
   +font-smoothing(antialiased)
 
@@ -25,29 +33,58 @@ a
   text-decoration: none
   border-bottom: 1px solid $border-color
   +transition(color, 0.25s)
+  &:visited
+    color: black
   &:hover,
   &:active
     color: $purple-color
     border-color: rgba($purple-color, 0.25)
 
+em
+  font-style: italic
+strong
+  font-weight: bold
+
+p
+  margin: ($unit / 2) 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+hr
+  height: 1px
+  border: none
+  background-color: transparent
+  margin: $unit auto
+
 .button
   display: inline-block
   +avant-garde
   text-decoration: none
-  color: white
   background-color: black
-  padding: 15px 30px
+  padding: 15px ($unit * 2)
   font-size: 13px
   line-height: 1
   cursor: pointer
   border: none
   +transition(background-color 0.25s, color 0.25s)
+  &, &:visited
+    color: white
   &:focus,
   &:hover
     outline: none
-    background-color: transparent
     color: white
     background-color: $purple-color
+  // Variants
+  &.button--inverted
+    background-color: white
+    &, &:visited
+      color: black
+    &:focus,
+    &:hover
+      color: white
+      background-color: $purple-color
 
 .bordered-input
   +appearance(none)

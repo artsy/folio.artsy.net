@@ -1,0 +1,8 @@
+%section.section{ class: "section-#{i + 1}" }
+  .section-inner
+    .section-meta
+      %h2.section-headline= section.headline
+      .section-description
+        = render_markdown(section.description)
+    .section-image
+      = image_tag section.image

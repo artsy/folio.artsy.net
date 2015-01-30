@@ -1,0 +1,29 @@
+---
+  headline: Hundreds of leading galleries around the world use folio
+  logos:
+    - src: logos/gagosian.jpg
+      alt: gagosian
+    - src: logos/bitforms.jpg
+      alt: bitforms
+    - src: logos/mitchell.jpg
+      alt: mitchell
+    - src: logos/scai.jpg
+      alt: scai
+    - src: logos/giacamo.jpg
+      alt: giacamo
+    - src: logos/alan-cristea.jpg
+      alt: alan-cristea
+    - src: logos/leila.jpg
+      alt: leila
+    - src: logos/waterhouse.jpg
+      alt: waterhouse
+
+  quotes:
+    - quote: 'Artsy Folio is an invaluable tool at fairs and away from the gallery, allowing us to review an artist’s work efficiently but intimately, and making requests for information and pricing a snap.'
+      credit:
+        name: Theo Downes-Le Guin
+        place: Upfor Gallery
+    - quote: 'As with all other parts of Artsy, the clean visual design and intuitive interface are complementary to the art and do not distract from or complicate the viewing experience.'
+      credit:
+        name: Austin Kennedy
+        place: Pace Prints

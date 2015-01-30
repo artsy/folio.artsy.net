@@ -32,58 +32,111 @@
   +clearfix
 
 .section-meta
-  width: 40%
   float: left
+  width: 40%
 .section-image
-  width: 60%
   float: right
+  width: 60%
   > img
     max-width: 100%
 
 .section-headline
   margin: $unit 0
+  padding: 0 ($unit * 3) 0 0
   font-size: 40px
-  padding-right: ($unit * 3)
+  line-height: 1.15
+.section-subheadline
+  margin: $unit 0
+  padding: 0 ($unit * 3) 0 0
+  font-size: 20px
 .section-description
   margin: $unit 0
   font-size: 18px
-  line-height: 1.25
-  padding-right: ($unit * 2)
+  padding: 0 ($unit * 2) 0 0
 .section-cta
-  margin: ($unit * 1.5) 0
+  margin-top: $unit
+  > p
+    font-size: 14px
+    margin-top: $unit
 
 // Specific to individual sections
 .section-1
   margin: 0
-  padding-top: ($header-height * 3)
-  padding-bottom: ($header-height * 3)
+  padding-top: ($header-height * 2)
+  padding-bottom: ($header-height * 2)
   background-color: $hero-bg-color
-  background-size: 70%
+  background-size: 60%
   background-repeat: no-repeat
   background-position: bottom right
   @media screen and (max-width: 1200px)
-    background-size: 75%
+    background-size: 70%
+  @media screen and (min-width: 1200px)
+    background-size: 60%
 
-.section-4
-  margin-bottom: $unit
-
-// Bottom form
-.cta
-  width: 600px
-  padding: $unit 0
-  margin: $unit auto
-  text-align: center
-  border-bottom: 2px solid $border-color
-  .section-headline
-    padding: 0
+.section-3
+  .section-meta
+    float: right
+    padding-left: ($unit * 2)
+  .section-image
+    float: left
+  .section-headline,
   .section-description
-    margin: ($unit * 1.5) 0
-    font-size: 16px
     padding: 0
-  input, .button
+
+.endorsements
+  margin: ($unit * 4) 0
+  text-align: center
+.endorsement-headline
+  position: relative
+  width: 400px
+  margin: $unit auto
+  font-size: 30px
+  padding-bottom: $unit
+  &:after
+    content: ''
     display: block
-    width: 100%
-    margin: ($unit / 2) 0
+    position: absolute
+    width: 50px
+    height: 2px
+    background-color: black
+    top: 100%
+    left: 50%
+    margin-left: -25px
+.endorsement-logos
+  width: 85%
+  margin: $unit auto
+.endorsement-logo
+  display: inline-block
+  margin: $unit
+  max-width: 200px
+  max-height: 50px
+  vertical-align: middle
+.endorsement-quotes
+  margin: ($unit * 2) 0
+.endorsement-quote
+  display: inline-block
+  width: 40%
+  padding: 0 $unit
+  vertical-align: top
+  font-size: 22px
+
+.cta
+  margin: $unit auto 0 auto
+  padding: $unit 0 ($unit * 4) 0
+  text-align: center
+  background-color: black
+  color: white
+  .section-headline,
+  .section-subheadline
+    padding: 0
+    margin-bottom: 0
+  .section-description
+    margin: ($unit * 1.5) 0 0 0
+    padding: 0
+    font-size: 16px
+  .button
+    display: block
+    margin: $unit auto
 .cta-inner
-  width: 300px
+  width: 400px
   margin: $unit auto
