@@ -54,12 +54,12 @@ class App
   bindEvents: ->
     $('.js-learn-more-hero').click (e) =>
       e.preventDefault()
-      mixpanel.track 'Clicked "Learn More" in hero'
+      mixpanel.track 'folio.artsy.net - Clicked "Learn More" in hero'
       @scrollTo $('.section-2')
 
-    mixpanel.track_links '.js-artsy-for-galleries', 'Clicked "Artsy For Galleries"'
-    mixpanel.track_links '.js-download-folio', 'Clicked "Download Folio"'
-    mixpanel.track_links '.js-learn-more-footer', 'Clicked "Learn More" in footer'
+    mixpanel.track_links '.js-artsy-for-galleries', 'folio.artsy.net - Clicked "Artsy For Galleries"'
+    mixpanel.track_links '.js-download-folio', 'folio.artsy.net - Clicked "Download Folio"'
+    mixpanel.track_links '.js-learn-more-footer', 'folio.artsy.net - Clicked "Learn More" in footer'
 
     return if @touch
 
