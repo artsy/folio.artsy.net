@@ -1,22 +1,23 @@
 ---
   headline: Hundreds of leading galleries around the world use folio
   logos:
-    - src: logos/gagosian.jpg
-      alt: gagosian
-    - src: logos/bitforms.jpg
-      alt: bitforms
-    - src: logos/mitchell.jpg
-      alt: mitchell
-    - src: logos/scai.jpg
-      alt: scai
-    - src: logos/giacamo.jpg
-      alt: giacamo
-    - src: logos/alan-cristea.jpg
-      alt: alan-cristea
-    - src: logos/leila.jpg
-      alt: leila
-    - src: logos/waterhouse.jpg
-      alt: waterhouse
+    - src: logos/gagosian.png
+      alt: Gagosian Gallery
+    - src: logos/bitforms.png
+      alt: Bitforms
+    - src: logos/two-palms.png
+      alt: Two Palms
+    - src: logos/borch.png
+      alt: Niels Borch Jensen
+    - src: logos/malingue.png
+      alt: Edouard Malingue Gallery
+    - src: logos/hoffman.png
+      alt: Rhona Hoffman Gallery
+    - src: logos/alan-cristea.png
+      alt: The Alan Cristea Gallery
+    - src: logos/waterhouse-dodd.png
+      alt: >
+        Waterhouse & Dodd
 
   quotes:
     - quote: 'Artsy Folio is an invaluable tool at fairs and away from the gallery, allowing us to review an artist’s work efficiently but intimately, and making requests for information and pricing a snap.'
