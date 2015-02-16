@@ -67,7 +67,7 @@ hr
   font-size: 13px
   line-height: 1
   cursor: pointer
-  border: none
+  border: 2px solid transparent
   +transition(background-color 0.25s, color 0.25s)
   &, &:visited
     color: white
@@ -85,6 +85,15 @@ hr
     &:hover
       color: white
       background-color: $purple-color
+  &.button--ghost
+    background-color: white
+    border-color: black
+    &, &:visited
+      color: black
+    &:focus,
+    &:hover
+      color: white
+      background-color: black
 
 .bordered-input
   +appearance(none)
