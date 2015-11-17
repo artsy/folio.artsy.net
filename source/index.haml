@@ -32,8 +32,11 @@
       = data.cta.headline
     %h3.section-subheadline
       = data.cta.description
-    %a.button.js-learn-more-footer{ href: data.cta.button.href }
-      = data.cta.button.label
+
+    .cta-image
+      = image_tag 'album.jpg'
+
+    = partial '_form'
 
     %hr
 
@@ -42,6 +45,3 @@
     %a.button.button--ghost.js-download-folio{ href: data.config.app_url }
       = data.config.app_download_text
 
-    %hr
-
-    = partial '_form'
