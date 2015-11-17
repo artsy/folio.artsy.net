@@ -1,0 +1,17 @@
+%form{ action: 'https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', method: 'POST' }
+  %input{ type: 'hidden', name: 'oid', value: '00DC0000000PWQJ' }
+  %input{ type: 'hidden', name: 'retURL', value: 'http://folio.artsy.net/?success=true' }
+
+  .fieldset.fieldset-1-up
+    %input.bordered-input{ type: 'text', name: 'company', placeholder: 'Gallery Name', required: true }
+
+  .fieldset.fieldset-3-up
+    %input.bordered-input{ type: 'text', name: 'first_name', placeholder: 'First Name', required: true }
+    %input.bordered-input{ type: 'text', name: 'last_name', placeholder: 'Last Name', required: true }
+    %input.bordered-input{ type: 'text', name: 'title', placeholder: 'Title at Gallery' }
+
+  .fieldset.fieldset-2-up
+    %input.bordered-input{ type: 'url', name: 'website', placeholder: 'Website', required: true }
+    %input.bordered-input{ type: 'email', name: 'email', placeholder: 'E-mail', required: true }
+
+  %button.button Apply

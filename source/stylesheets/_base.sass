@@ -110,3 +110,23 @@ hr
     border-color: $purple-color
     outline: none
     +transition(border-color 0.5s)
+
+.fieldset
+  margin: ($unit / 2) 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+  font-size: 0
+  > input
+    display: inline-block
+
+.fieldset-1-up > input
+  width: calc(100% - #{$unit / 2})
+  margin: 0 ($unit / 4)
+.fieldset-2-up > input
+  width: calc(50% - #{$unit / 2})
+  margin: 0 ($unit / 4)
+.fieldset-3-up > input
+  width: calc(33.33% - #{$unit / 2})
+  margin: 0 ($unit / 4)
