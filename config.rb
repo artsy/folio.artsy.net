@@ -4,6 +4,7 @@ end
 
 configure :development do
   activate :livereload
+  activate :dotenv
 end
 
 set :css_dir, 'stylesheets'
