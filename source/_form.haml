@@ -2,18 +2,19 @@
   %input{ type: 'hidden', name: 'oid', value: '00DC0000000PWQJ' }
   %input{ type: 'hidden', name: '00NC0000005R4cC', value: 'Inbound' }
   %input{ type: 'hidden', name: '00NC0000005RNdW', value: 'Folio' }
+  %input{ type: 'hidden', name: '00NC0000006VbjC', value: '' }
   %input{ type: 'hidden', name: 'retURL', value: 'http://folio.artsy.net/?success=true' }
 
   .fieldset.fieldset-1-up
-    %input.bordered-input{ type: 'text', name: 'company', placeholder: 'Gallery Name', required: true }
+    %input.bordered-input{ type: 'text', name: 'company', placeholder: 'Gallery Name *', required: true }
 
   .fieldset.fieldset-3-up
-    %input.bordered-input{ type: 'text', name: 'first_name', placeholder: 'First Name', required: true }
-    %input.bordered-input{ type: 'text', name: 'last_name', placeholder: 'Last Name', required: true }
+    %input.bordered-input{ type: 'text', name: 'first_name', placeholder: 'First Name *', required: true }
+    %input.bordered-input{ type: 'text', name: 'last_name', placeholder: 'Last Name *', required: true }
     %input.bordered-input{ type: 'text', name: 'title', placeholder: 'Title at Gallery' }
 
   .fieldset.fieldset-2-up
-    %input.bordered-input{ name: 'website', placeholder: 'Website', required: true }
-    %input.bordered-input{ type: 'email', name: 'email', placeholder: 'E-mail', required: true }
+    %input.bordered-input{ name: 'website', placeholder: 'Website *', required: true }
+    %input.bordered-input{ type: 'email', name: 'email', placeholder: 'E-mail *', required: true }
 
-  %button.button Get Started
+  %button.button= data.form.submit

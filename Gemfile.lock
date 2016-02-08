@@ -32,6 +32,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    dotenv (1.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -97,6 +98,9 @@ GEM
       rack (>= 1.4.5, < 2.0)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-dotenv (1.1.1)
+      dotenv (~> 1.0)
+      middleman-core (>= 3.2)
     middleman-livereload (3.4.3)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -174,10 +178,11 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 3.4.0)
+  middleman-dotenv (~> 1.0)
   middleman-livereload (~> 3.4.3)
   middleman-minify-html (~> 3.4.1)
   middleman-s3_sync (~> 3.3.3)
   redcarpet (~> 3.3.3)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

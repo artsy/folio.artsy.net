@@ -7,9 +7,9 @@
         = render_markdown section.description
       .section-cta
         %a.button.section-cta-button.js-learn-more-hero{ href: '#' }
-          Learn More
+          = section.action
         %p
-          Already a partner?
+          = section.opt_out
           = link_to data.config.app_download_text, data.config.app_url
 
   %a.caret.js-scroll-to-fold{ href: '#' }

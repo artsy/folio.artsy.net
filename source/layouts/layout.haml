@@ -10,8 +10,8 @@
     %title= current_page.data.title || 'Folio: Artsy for Galleries'
 
     = stylesheet_link_tag 'all'
-    = javascript_include_tag ['//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', '//fast.fonts.net/jsapi/f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741.js', 'all']
-    = partial 'mixpanel.html'
+    = javascript_include_tag ['//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', '//fast.fonts.net/jsapi/f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741.js', '//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js', 'all']
+    = partial 'segment'
 
   %body{ class: page_classes }
     = yield

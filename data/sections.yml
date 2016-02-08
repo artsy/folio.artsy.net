@@ -3,6 +3,10 @@
     Access all your art, anytime
   description: >
     Store thousands of artworks on an unlimited number of iPads or iPhones, and access them anytime—even without an Internet connection.
+  action: >
+    Learn more
+  opt_out: >
+    Already a partner?
   image: cover.jpg
 -
   headline: Share artwork details easily via email

@@ -9,7 +9,7 @@ The website for Artsy Folio ( [Artsy/Energy](https://github.com/artsy/energy) )
 ### Meta
 
 * __State:__ production
-* __Production:__ [https://www.folio.artsy.net/](https://www.folio.artsy.net/)
+* __Production:__ [http://folio.artsy.net/](http://folio.artsy.net/)
 * __CI:__ [Semaphore](https://semaphoreapp.com/artsy-it/folio-artsy-net/)
 * __Point People:__ [@dzucconi](https://github.com/dzucconi)
 

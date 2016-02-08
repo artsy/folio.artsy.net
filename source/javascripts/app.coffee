@@ -3,12 +3,16 @@ window.App = class App
 
   initialize: ->
     @bind()
+    @setMktoTrkVal()
     @success()
 
   success: ->
     return unless Utils.qs().success
     modal = new Modal 'Thanks!<br>Your application has been submitted.'
     modal.open()
+
+  setMktoTrkVal: ->
+    $("input[name='00NC0000006VbjC']").val Cookies.get('_mkto_trk')
 
   scrollTo: ($el, duration = 500) ->
     position = ($el.position().top - @$header.outerHeight()) + 1
@@ -21,12 +25,12 @@ window.App = class App
 
     $('.js-learn-more-hero').click (e) =>
       e.preventDefault()
-      mixpanel.track 'folio.artsy.net - Clicked "Learn More" in hero'
+      analytics.track 'folio.artsy.net - Clicked "Learn More" in hero'
       @scrollTo $('.section-2')
 
-    mixpanel.track_links '.js-artsy-for-galleries', 'folio.artsy.net - Clicked "Artsy For Galleries"'
-    mixpanel.track_links '.js-download-folio', 'folio.artsy.net - Clicked "Download Folio"'
-    mixpanel.track_links '.js-learn-more-footer', 'folio.artsy.net - Clicked "Learn More" in footer'
+    analytics.trackLink $('.js-artsy-for-galleries'), 'folio.artsy.net - Clicked "Artsy For Galleries"'
+    analytics.trackLink $('.js-download-folio'), 'folio.artsy.net - Clicked "Download Folio"'
+    analytics.trackLink $('.js-learn-more-footer'), 'folio.artsy.net - Clicked "Learn More" in footer'
 
     return if Utils.isTouch()
 
