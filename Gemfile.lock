@@ -40,7 +40,7 @@ GEM
     eventmachine (1.0.8)
     excon (0.45.4)
     execjs (2.6.0)
-    ffi (1.9.10)
+    ffi (1.11.1)
     fog-aws (0.7.6)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
