@@ -146,7 +146,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redcarpet (3.3.3)
+    redcarpet (3.5.1)
     ruby-progressbar (1.7.5)
     sass (3.4.19)
     sprockets (2.12.5)
@@ -183,7 +183,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.4.3)
   middleman-minify-html (~> 3.4.1)
   middleman-s3_sync (~> 3.3.3)
-  redcarpet (~> 3.3.3)
+  redcarpet (~> 3.5.1)
 
 BUNDLED WITH
    1.11.2
