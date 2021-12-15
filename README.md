@@ -4,7 +4,7 @@
 
 The website for Artsy Folio ( [Artsy/Energy](https://github.com/artsy/energy) )
 
-![](https://raw.githubusercontent.com/artsy/folio.artsy.net/master/readme/website_screenshot.png)
+![](https://raw.githubusercontent.com/artsy/folio.artsy.net/main/readme/website_screenshot.png)
 
 ### Meta
 
@@ -22,4 +22,4 @@ middleman
 
 ### Deployment
 
-PRs merged to master are deployed to production via Semaphore.
+PRs merged to main are deployed to production via Semaphore.
